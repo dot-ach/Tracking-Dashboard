@@ -1,7 +1,7 @@
 :root{
   /* Primary */
   --Blue: #5847eb;
-  --Light-red: #ff8c66;/*work*/
+  --Light-orange: #ff8c66;/*work*/
   --Soft-blue: #56c2e6;/*play*/
   --Light-red: #ff5c7c;/*study*/
   --Lime-green: #4acf81;/*exercise*/
@@ -21,5 +21,74 @@
 }
 body{
   font-family: 'Rubik', sans-serif;
+  background-color: var(--Very-dark-blue);
+}
+main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.card{
+  background-color: var(--Dark-blue);
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.perfil-card .info{
+  background-color: var(--Blue);
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+.perfil-card .info .img{
+  width: 60px;
+  height: 60px;
+  background-image: url(./images/image-jeremy.png);
+  background-size: 60px;
+  background-repeat: no-repeat;
+  /* object-fit: contain; */
+  border: 2px solid white;
+  border-radius: 45px ;
+}
+.info-profile{
+  margin-left: 20px;
+  /* font-size: 1.2rem; */
+  color: var(--Pale-Blue);
+}
+.info-profile p:nth-child(2){
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.perfil-days{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.perfil-days ul{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.perfil-days ul li{
+  list-style: none;
+  color: var(--Pale-Blue);
+  font-size: 1.1rem;
 }
 
+.work-card div:nth-child(1){
+  width: 100%;
+  background-color: var(--Light-orange);
+}
+.info-cards{
+  background-color: red;
+}
