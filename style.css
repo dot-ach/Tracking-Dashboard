@@ -85,10 +85,94 @@ main{
   font-size: 1.1rem;
 }
 
-.work-card div:nth-child(1){
+.work-card .background{
   width: 100%;
+  height: 50px;
+  background-image: url(./images/icon-work.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position-x: 240px;
   background-color: var(--Light-orange);
+  border-radius: 20px 20px 0 0;
+}
+.play-card .background{
+  width: 100%;
+  height: 50px;
+  background-image: url(./images/icon-play.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position-x: 240px;
+  background-color: var(--Soft-blue);
+  border-radius: 20px 20px 0 0;
+}
+.study-card .background{
+  width: 100%;
+  height: 50px;
+  background-image: url(./images/icon-study.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position-x: 240px;
+  background-color: var(--Light-red);
+  border-radius: 20px 20px 0 0;
+}
+.exercise-card .background{
+  width: 100%;
+  height: 50px;
+  background-image: url(./images/icon-exercise.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position-x: 240px;
+  background-color: var(--Lime-green);
+  border-radius: 20px 20px 0 0;
+}
+.social-card .background{
+  width: 100%;
+  height: 50px;
+  background-image: url(./images/icon-social.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position-x: 250px;
+  background-color: var(--Violet);
+  border-radius: 20px 20px 0 0;
+}
+.self-card .background{
+  width: 100%;
+  height: 50px;
+  background-image: url(./images/icon-self-care.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position-x: 250px;
+  background-color: var(--Soft-orange);
+  border-radius: 20px 20px 0 0;
 }
 .info-cards{
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  color: white;
+  padding: 20px;
+}
+.info-cards div:nth-child(1){
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  height: auto;
+  margin-bottom: 10px;
+  background-color: var(--Dark-blue);
+  background-image: url(./images/icon-ellipsis.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:auto; 
+  /* background-position-x: 250px; */
+}
+.info-cards div:nth-child(2){
+  height: auto;
+  display: flex;
+  /* justify-content: space-around; */
 }
