@@ -84,6 +84,10 @@ main{
   color: var(--Pale-Blue);
   font-size: 1.1rem;
 }
+.perfil-days ul li:nth-child(2){
+  font-weight: 500;
+  color: white;
+}
 
 .work-card .background{
   width: 100%;
@@ -156,14 +160,15 @@ main{
   flex-direction: column;
   font-size: 1.4rem;
   color: white;
-  padding: 20px;
+  padding: 16px;
 }
 .info-cards div:nth-child(1){
   display: flex;
   align-items: center;
   /* justify-content: center; */
   height: auto;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  /* margin-bottom: 10px; */
   background-color: var(--Dark-blue);
   background-image: url(./images/icon-ellipsis.svg);
   background-position: right;
@@ -171,8 +176,20 @@ main{
   background-size:auto; 
   /* background-position-x: 250px; */
 }
+.info-cards div:nth-child(1) p{
+  font-weight: 500;
+}
 .info-cards div:nth-child(2){
   height: auto;
   display: flex;
-  /* justify-content: space-around; */
+  align-items: center;
+  justify-content: space-between;
+}
+.info-cards div:nth-child(2) p:nth-child(1){
+  font-size: 2.4rem;
+  font-weight: 100;
+}
+.info-cards div:nth-child(2) p:nth-child(2){
+  font-size: 1.2rem;
+  color: var(--Desaturated-blue);
 }
