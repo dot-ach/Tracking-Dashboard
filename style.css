@@ -54,9 +54,9 @@ main{
   background-image: url(./images/image-jeremy.png);
   background-size: 60px;
   background-repeat: no-repeat;
-  /* object-fit: contain; */
+  object-fit: contain;
   border: 2px solid white;
-  border-radius: 45px ;
+  border-radius: 50% ;
 }
 .info-profile{
   margin-left: 20px;
@@ -65,7 +65,8 @@ main{
 }
 .info-profile p:nth-child(2){
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  color: white;
 }
 .perfil-days{
   height: 60px;
@@ -96,7 +97,7 @@ main{
   background-position: right;
   background-repeat: no-repeat;
   background-size:auto;
-  background-position-x: 240px;
+  background-position-x: 90%;
   background-color: var(--Light-orange);
   border-radius: 20px 20px 0 0;
 }
@@ -107,7 +108,7 @@ main{
   background-position: right;
   background-repeat: no-repeat;
   background-size:auto;
-  background-position-x: 240px;
+  background-position-x: 90%;
   background-color: var(--Soft-blue);
   border-radius: 20px 20px 0 0;
 }
@@ -118,7 +119,7 @@ main{
   background-position: right;
   background-repeat: no-repeat;
   background-size:auto;
-  background-position-x: 240px;
+  background-position-x: 90%;
   background-color: var(--Light-red);
   border-radius: 20px 20px 0 0;
 }
@@ -129,7 +130,7 @@ main{
   background-position: right;
   background-repeat: no-repeat;
   background-size:auto;
-  background-position-x: 240px;
+  background-position-x: 90%;
   background-color: var(--Lime-green);
   border-radius: 20px 20px 0 0;
 }
@@ -140,7 +141,7 @@ main{
   background-position: right;
   background-repeat: no-repeat;
   background-size:auto;
-  background-position-x: 250px;
+  background-position-x: 90%;
   background-color: var(--Violet);
   border-radius: 20px 20px 0 0;
 }
@@ -151,7 +152,7 @@ main{
   background-position: right;
   background-repeat: no-repeat;
   background-size:auto;
-  background-position-x: 250px;
+  background-position-x: 90%;
   background-color: var(--Soft-orange);
   border-radius: 20px 20px 0 0;
 }
@@ -186,10 +187,25 @@ main{
   justify-content: space-between;
 }
 .info-cards div:nth-child(2) p:nth-child(1){
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 100;
 }
 .info-cards div:nth-child(2) p:nth-child(2){
   font-size: 1.2rem;
   color: var(--Desaturated-blue);
+}
+@media (min-width: 360px) {
+  .info-profile p:nth-child(2){
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 400px) {
+  .info-profile p:nth-child(2){
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 400px){
+  .info-cards div:nth-child(2) p:nth-child(1){
+    font-size: 2.2rem;
+  }
 }

@@ -1,0 +1,37 @@
+main{
+  width: 100vw;
+  height: 97vh;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  grid-template-areas: 
+  "profile one two three"
+  "profile four five six";
+  align-content: center;
+  justify-content: center;
+}
+.perfil-card{
+  grid-area: profile;
+}
+.work-card{
+  grid-area: one;
+}
+.play-card{
+  grid-area: two;
+}
+.study-card{
+  grid-area: three;
+}
+.exercise-card{
+  grid-area: four;
+}
+.social-card{
+  grid-area: five;
+}
+.self-card{
+  grid-area: six;
+}
+.info-cards div:nth-child(2){
+  flex-direction: column;
+  align-items: baseline;
+}

@@ -1,0 +1,36 @@
+main{
+  display: grid;
+  grid-auto-columns: 50%;
+  grid-template-areas: 
+  "header header"
+  "1st 2nd"
+  "3rd 4th"
+  "5th 6th";
+  align-items: center;
+  justify-items: center;
+}
+.perfil-card{
+  grid-area: header;
+}
+.work-card{
+  grid-area: 1st;
+}
+.play-card{
+  grid-area: 2st;
+}
+.study-card{
+  grid-area: 3st;
+}
+.exercise-card{
+  grid-area: 4st;
+}
+.social-card{
+  grid-area: 5st;
+}
+.self-card{
+  grid-area: 6st;
+}
+
+.info-cards div:nth-child(2) p:nth-child(1){
+  font-size: 2.8rem;
+}
