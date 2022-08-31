@@ -2,11 +2,9 @@
 const periodsContainer = document.querySelector('.perfil-days');
 const cardContainers = [...document.querySelectorAll('.card')];
 
-cardContainers[1].addEventListener('click', event => {
-  if(event.target.nodeName === 'DIV'  && event.path[1].className === 'info-cards'){
-    console.log('OK');
-    console.log(event);
-  }
-})
+// Elements
+const arrayTitles = [...document.querySelectorAll('.card .info-cards div:nth-child(1) p')];
+const arrayHours = [...document.querySelectorAll('.card .info-cards div:nth-child(2) p:nth-child(1)')];
+const arrayLastWeek = [...document.querySelectorAll('.card .info-cards div:nth-child(2) p:nth-child(2)')];
 
-console.log(cardContainers[1]);
+// console.log(arrayTitles[1].outerText);
