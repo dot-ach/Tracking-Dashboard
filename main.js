@@ -44,8 +44,8 @@ const pushElements = async (period) => {
     return item.timeframes
   });
   
-  const timeFramesPrevious =  timeFrames.flatMap(item => item.daily).flatMap(item => item.previous);
-  const timeFramesCurrent =  timeFrames.flatMap(item => item.daily).flatMap(item => item.current);
+  const timeFramesPrevious =  timeFrames.flatMap(item => item.monthly).flatMap(item => item.previous);
+  const timeFramesCurrent =  timeFrames.flatMap(item => item. monthly).flatMap(item => item.current);
   // console.log(timeFramesCurrent, timeFramesPrevious);
 
   cardsWithoutPerson.map((item, counter=0) => {
@@ -55,8 +55,8 @@ const pushElements = async (period) => {
     // console.log(hourItemsDaily, hourItemsMonthly, hourItemsWeekly);
     console.log(item);
     item.innerHTML = '';
-    const container = document.createElement('section');
-    container.className = `${titlesLowerCase[counter]}-card card`;
+    // const container = document.createElement('section');
+    // container.className = `${titlesLowerCase[counter]}-card card`;
 
     const background = document.createElement('div');
     background.className = 'background';
@@ -74,17 +74,17 @@ const pushElements = async (period) => {
     const hoursLabel = document.createElement('p');
     const weekHoursLabel = document.createElement('p');
     // const hours = document.createTextNode(`si`);
-    const hours = document.createTextNode(`${timeFramesCurrent[counter]}`);
-    const hourPerWeek = document.createTextNode(`${timeFramesPrevious[counter]}`);
+    const hours = document.createTextNode(`${timeFramesCurrent[counter]}hrs`);
+    const hourPerWeek = document.createTextNode(`Last Week - ${timeFramesPrevious[counter]}hrs`);
     // const hours = document.createTextNode(`10`);
     hoursLabel.appendChild(hours);
     weekHoursLabel.appendChild(hourPerWeek);
     
-    container.append(background, card);
+    // container.append(background, card);
     infoContainer.append(hoursLabel, weekHoursLabel);
     card.append(titleCardContainer, infoContainer);
     
-    item.appendChild(container);
+    item.append(background,card);
     counter ++;
     
     // console.log(container);
