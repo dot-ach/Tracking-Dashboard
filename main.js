@@ -42,38 +42,19 @@ const pushElements = async (period) => {
 
   const timeFrames = elements.map(item => {
     return item.timeframes
-  })
-  const timeFramesDaily = elements.map(item => {
-    return item.timeframes.daily;
   });
-
-  const timeFramesWeekly = elements.map(item => {
-    return item.timeframes.weekly;
-  });
-
-  const timeFramesMonthly = elements.map(item => {
-    return item.timeframes.monthly;
-  });
+  
+  const timeFramesPrevious =  timeFrames.flatMap(item => item.daily).flatMap(item => item.previous);
+  const timeFramesCurrent =  timeFrames.flatMap(item => item.daily).flatMap(item => item.current);
+  // console.log(timeFramesCurrent, timeFramesPrevious);
 
   cardsWithoutPerson.map((item, counter=0) => {
-    
-  //   <section class="work-card card">
-  //   <div class="background">
-  //     <!-- <img src="./images/icon-work.svg" alt="work-icon"> -->
-  //   </div>
-  //   <div class="info-cards">
-  //     <div>
-  //       <p>Work</p>
-  //       <!-- <img></img> -->
-  //     </div>
-  //     <div>
-  //       <p>32hrs</p>
-  //       <p>Last Week - 36hrs</p>
-  //     </div>
-  //   </div>
-  // </section>
-    console.log(timeFrames[counter].period);
-    console.log(period);
+    // const hourItemsDaily = timeFrames[counter].daily;
+    // const hourItemsMonthly = timeFrames[counter].monthly;
+    // const hourItemsWeekly = timeFrames[counter].weekly;
+    // console.log(hourItemsDaily, hourItemsMonthly, hourItemsWeekly);
+    console.log(item);
+    item.innerHTML = '';
     const container = document.createElement('section');
     container.className = `${titlesLowerCase[counter]}-card card`;
 
@@ -92,9 +73,9 @@ const pushElements = async (period) => {
     const infoContainer = document.createElement('div');
     const hoursLabel = document.createElement('p');
     const weekHoursLabel = document.createElement('p');
-    const hours = document.createTextNode(`si`);
-    // const hours = document.createTextNode(`${timeFrames}.${period}.${[0]}`);
-    const hourPerWeek = document.createTextNode(`Last week - ${32}hrs`);
+    // const hours = document.createTextNode(`si`);
+    const hours = document.createTextNode(`${timeFramesCurrent[counter]}`);
+    const hourPerWeek = document.createTextNode(`${timeFramesPrevious[counter]}`);
     // const hours = document.createTextNode(`10`);
     hoursLabel.appendChild(hours);
     weekHoursLabel.appendChild(hourPerWeek);
@@ -103,8 +84,10 @@ const pushElements = async (period) => {
     infoContainer.append(hoursLabel, weekHoursLabel);
     card.append(titleCardContainer, infoContainer);
     
+    item.appendChild(container);
     counter ++;
-    console.log(container);
+    
+    // console.log(container);
   });
   // console.log(timeFramesWeekly);
   // console.log(elements[0].timeframes.monthly.current);

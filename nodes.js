@@ -1,7 +1,8 @@
 // Containers
 const periodsContainer = document.querySelector('.perfil-days');
 const cardContainers = [...document.querySelectorAll('.card')];
-// console.log(cardContainers)
+// cardContainers.shift();
+console.log(cardContainers)
 
 // Elements
 const arrayTitles = [...document.querySelectorAll('.card .info-cards div:nth-child(1) p')];
